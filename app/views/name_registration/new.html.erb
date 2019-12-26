@@ -3,6 +3,7 @@
 <%= form_tag("/name_registration", method: "post") do %>
   <%= label_tag(:name, "Name:") %>
   <%= text_field_tag(:name) %>
+  <br>
   <%= submit_tag("Enter name") %>
 <% end %>
 

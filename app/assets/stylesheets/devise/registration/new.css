@@ -10,14 +10,16 @@ input[type=email], input[type=password] {
 input[type=submit] {
     background-color: #79be43;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    #padding: 14px 20px;
+    #margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 25%;
+    height: 45%;
 }
 
 .login-wrapper{
     padding: 2em;
     background-color: lavender;
+    width: 20%;
 }
