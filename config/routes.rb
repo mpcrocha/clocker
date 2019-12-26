@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   get 'home/index'
   devise_for :users
 
@@ -14,8 +12,10 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  #
+
+  get 'name_registration/new'
+  resources :name_registration, only: [:new, :create]
+
   resources :users do
     resources :clock_records
   end

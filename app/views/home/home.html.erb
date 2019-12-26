@@ -1,2 +1,5 @@
-<h1>Home#home</h1>
-<p>Find me in app/views/home/home.html.erb</p>
+<p>Login In, Sign up or Enter Name</p>
+
+<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
+<%= link_to "Enter Name", new_user_registration_path, :class => 'navbar-link'  %>

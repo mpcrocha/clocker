@@ -1,0 +1,9 @@
+<h2>Enter Name</h2>
+
+<%= form_tag("/name_registration", method: "post") do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Enter name") %>
+<% end %>
+
+
