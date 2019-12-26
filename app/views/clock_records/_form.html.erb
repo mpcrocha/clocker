@@ -1,0 +1,27 @@
+<%= form_with(model: clock_record, url: user_clock_records_path, local: true) do |form| %>
+  <% if clock_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(clock_record.errors.count, "error") %> prohibited this clock_record from being saved:</h2>
+
+      <ul>
+        <% clock_record.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.select :clock_type, ['IN', 'OUT'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.datetime_select :time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

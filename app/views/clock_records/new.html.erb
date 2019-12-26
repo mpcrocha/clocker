@@ -1,0 +1,6 @@
+<h1>New Clock Record</h1>
+
+<%= render 'form', clock_record: @clock_record %>
+
+<%= link_to 'Back', user_clock_records_path %>
+<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Clock Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Time</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clock_records.each do |clock_record| %>
+      <tr>
+        <td><%= clock_record.clock_type %></td>
+        <td><%= clock_record.time %></td>
+        <td><%= clock_record.user_id %></td>
+        <td><%= link_to 'Show', user_clock_record_path(current_user, clock_record) %></td>
+        <td><%= link_to 'Edit', edit_user_clock_record_path(current_user, clock_record) %></td>
+        <td><%= link_to 'Destroy', user_clock_record_path(current_user, clock_record), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @clock_records %>
+<br>
+
+<%= link_to 'New Clock Record', new_user_clock_record_path %>
+<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>

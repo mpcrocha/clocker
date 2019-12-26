@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @clock_record.clock_type %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @clock_record.time %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @clock_record.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_clock_record_path(@clock_record) %> |
+<%= link_to 'Back', user_clock_records_path %>
+<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
