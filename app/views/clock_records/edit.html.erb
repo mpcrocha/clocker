@@ -1,7 +1,7 @@
 <h1>Editing Clock Record</h1>
 
-<%= render 'form', clock_record: @clock_record %>
+<%= render 'form', clock_record: @clock_record, user_clock_records_path: user_clock_record_path(current_user, @clock_record) %>
 
-<%= link_to 'Show', user_clock_records_path(@clock_record) %> |
+<%= link_to 'Show', user_clock_records_path(current_user) %> |
 <%= link_to 'Back', user_clock_records_path %>
 <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>

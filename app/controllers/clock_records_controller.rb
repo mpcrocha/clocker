@@ -32,7 +32,7 @@ class ClockRecordsController < ApplicationController
   def update
     respond_to do |format|
       if @clock_record.update(clock_record_params)
-        format.html { redirect_to @clock_record, notice: 'Clock record was successfully updated.' }
+        format.html { redirect_to user_clock_records_path(@clock_record), notice: 'Clock record was successfully updated.' }
         format.json { render :show, status: :ok, location: @clock_record }
       else
         format.html { render :edit }
