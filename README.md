@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create the local database
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```docker run --name clocker_db -e POSTGRES_USER=clocker -e POSTGRES_DB=clocker -e POSTGRES_PASSWORD='clocker!23' -d -p 5451:5432 postgres```
