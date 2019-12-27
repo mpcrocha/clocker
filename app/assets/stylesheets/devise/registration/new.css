@@ -10,8 +10,8 @@ input[type=email], input[type=password] {
 input[type=submit] {
     background-color: #79be43;
     color: white;
-    #padding: 14px 20px;
-    #margin: 8px 0;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 25%;
@@ -22,4 +22,7 @@ input[type=submit] {
     padding: 2em;
     background-color: lavender;
     width: 20%;
+    position: fixed;
+    top: 20%;
+    left: 40%;
 }

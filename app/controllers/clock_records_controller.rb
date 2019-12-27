@@ -2,7 +2,7 @@ class ClockRecordsController < ApplicationController
   before_action :set_clock_record, only: [:show, :edit, :update, :destroy]
 
   def index
-    @clock_records = ClockRecord.where(user_id: current_user.id).paginate(page: params[:page], per_page: 20).order('time DESC')
+    @clock_records = current_user.clock_records.paginate(page: params[:page], per_page: 20).order('time DESC')
   end
 
   def show
